@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/ControllerTodos/static/css/main.bde0043a.css",
+    "main.js": "/ControllerTodos/static/js/main.5ebe1db1.js",
+    "static/media/AndresTech.png": "/ControllerTodos/static/media/AndresTech.2e618204890a0ad86e2d.png",
+    "index.html": "/ControllerTodos/index.html",
+    "main.bde0043a.css.map": "/ControllerTodos/static/css/main.bde0043a.css.map",
+    "main.5ebe1db1.js.map": "/ControllerTodos/static/js/main.5ebe1db1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bde0043a.css",
+    "static/js/main.5ebe1db1.js"
+  ]
+}
