@@ -1,0 +1,19 @@
+:root{
+    --colorNegro : #112B3C;
+    --colorAzul:#205375;
+    --colorNaranja :#08fdd8;
+    --colorBlanco : #EFEFEF;
+}
+
+.TodoFormButton {
+    cursor:pointer;
+    display:inline-block;
+    font-size:20px;
+    color:var(--colorBlanco);
+    font-weight:400px;
+    width:120px;
+    height:48px;
+    border-radius:2px;
+    border:none;
+}
+

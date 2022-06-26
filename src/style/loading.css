@@ -1,0 +1,70 @@
+
+
+.loadingContent{
+    display:flex;
+    width:100%;
+    margin-top: 1em;
+    justify-content: center;
+}
+
+.loadingContent img{
+    width:30%;
+    height:30%;
+    border-radius: 50%;
+    background:#08fdd0;
+    margin-left: 10px;
+    animation-name: scaleSpan;
+    animation-duration: 5s;
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+    opacity:1;
+}
+
+.loadingContent p{
+    position: absolute;
+    color:#08fdd8;
+    bottom: 0;
+    font-size: 1.3em;
+    animation-name: parrafo;
+    animation-duration: 5s;
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+}
+
+@keyframes parrafo {
+    0% {
+        opacity: 0;
+    }
+
+    20%{
+        opacity: 1;
+    }
+
+    80%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity:0;
+    }
+}
+
+@keyframes scaleSpan {
+    0%{
+        opacity: 0;
+        transform: rotate(20deg);
+    }
+    50%{
+        opacity: 0.5;
+        transform: rotate(170deg);
+    }
+    90%{
+        opacity: 1;
+        transform: rotate(361deg);
+    }
+
+    100%{
+        opacity: 0;
+        transform: rotate(363deg);
+    }
+}
