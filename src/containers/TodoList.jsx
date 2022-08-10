@@ -8,12 +8,21 @@ const LinkUl = styled.ul`
   list-style:none;
 `
 
-function TodoList({children}) {
+function TodoList(props) {
+
+  const renderFunc = props.children || props.render
+
   return (
     <>
         <section>
+        {props.error && props.onError()}
+        {props.loading && props.onLoading()}
+        {(!props.loading && !props.totalTodos) && props.onEmpty()}
+        {(!!props.totalTodos && !props.searchTodos.length) && props.onEmptySearchResults(props.searchText)}
+        { (!props.loading && !props.error) && props.searchTodos.map(renderFunc)}
+
           <LinkUl>
-              {children}
+              {props.children}
           </LinkUl>
         </section>
     </>

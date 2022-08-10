@@ -1,6 +1,6 @@
-import React, {useContext, useState} from 'react'
+import React, {useState} from 'react'
 
-import ProviderContext from '../context/todoContext'
+
 
 import styled from "styled-components"
 import "../style/_var.css"
@@ -67,11 +67,11 @@ const TodoButtonCancel = styled.button`
 `
 
 
-function TodoForm() {
+function TodoForm({addTodo, setOpenModal}) {
 
     const [newTodoValue, setNewTodoValue] = useState('')
 
-    const {addTodo, setOpenModal} = useContext(ProviderContext.TodoContext)
+    
 
     const handleChange = (e) =>{
         const {value} = e.target

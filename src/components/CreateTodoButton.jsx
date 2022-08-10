@@ -1,8 +1,8 @@
-import React,{useContext} from 'react'
+import React from 'react'
 import "../style/_var.css"
 import styled from "styled-components"
 
-import ProviderContext from "../context/todoContext"
+
 
 
 const CreateButton = styled.button`
@@ -37,10 +37,7 @@ const TitleButton = styled.span`
 
 
 
-function CreateTodoButton() {
-
-  const {setOpenModal, openModal} = useContext(ProviderContext.TodoContext)
-
+function CreateTodoButton({setOpenModal, openModal}) {
   const handleButton = () => {
     setOpenModal(!openModal)
   };

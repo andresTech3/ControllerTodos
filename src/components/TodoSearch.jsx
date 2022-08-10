@@ -1,13 +1,8 @@
-import React,{useContext} from 'react'
+import React from 'react'
 
 import { FaSearch } from "react-icons/fa";
 import "../style/_var.css"
 import styled from "styled-components"
-
-import ProviderContext from "../context/todoContext"
-
-
-
 
 const Input_search = styled.input`
   background:var(--colorNaranja);
@@ -28,6 +23,10 @@ const Input_search = styled.input`
     font-weight:400;
   }
 
+  &:disabled{
+    opacity:25%;
+  }
+
 `
 
 const ContainerSearch = styled.div`
@@ -46,25 +45,24 @@ const styledSeacrch =  {
 
 
 
-function TodoSearch() {
-
-  const {search, setSearch} = useContext(ProviderContext.TodoContext)
+function TodoSearch({search, setSearch,loading}) {
 
   const handleChangeSearch = (e) =>{
     setSearch(e.target.value)
   }
 
-  return [
+  return (
       <ContainerSearch>
         <Input_search
         onChange={handleChangeSearch}
-        type="text" 
+        type="text"
         placeholder='Busca el Todo deseado'
         value={search}
+        disabled ={loading}
         />
         <FaSearch style={styledSeacrch}/>
       </ContainerSearch>
-  ]
+  )
 }
 
 export default TodoSearch

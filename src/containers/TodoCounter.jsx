@@ -1,8 +1,7 @@
-import React,{useContext} from 'react'
+import React from 'react'
 import styled from "styled-components";
 
 import "../style/_var.css"
-import ProviderContext from "../context/todoContext"
 
 const TitleCounter = styled.h2`
   font-size:24px;
@@ -10,14 +9,14 @@ const TitleCounter = styled.h2`
   margin:0px;
   padding:48px;
   color:var(--colorNaranja);
+  opacity :${props => props.loading ? "25%" : "100%"};
 `
 
 
-function TodoCounter() {
-  const {completedTodos, totalTodos} = useContext(ProviderContext.TodoContext)
+function TodoCounter({totalTodos, completedTodos,loading}) {
   return (
     <>
-        <TitleCounter>Has completado {completedTodos} de {totalTodos} Todos</TitleCounter>
+        <TitleCounter loading={loading}>Has completado {completedTodos} de {totalTodos} Todos</TitleCounter>
     </>
   )
 }
